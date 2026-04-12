@@ -113,7 +113,6 @@
       transform: rotate(180deg);
     }
 
-
     h1 {
       text-align: center;
       color: var(--text);
@@ -168,6 +167,27 @@
       text-decoration: underline;
       color: #e74c3c;
     }
+		/* 链接较多时改为3列 */
+	@media (min-width: 1200px) {
+	  .link-list {
+	    column-count: 3;
+	  }
+	}
+	
+	/* 链接很多时改为4列 */
+	@media (min-width: 1600px) {
+	  .link-list {
+	    column-count: 4;
+	  }
+	}
+	
+	/* 平板设备 */
+	@media (max-width: 992px) {
+	  .link-list {
+	    column-count: 2;
+	  }
+	}
+	
     @media (max-width: 768px) {
       .link-list { column-count: 1; }
     }
@@ -183,12 +203,13 @@
 
 
 <div class="tabs">
-  <button class="tab-button active" onclick="openTab(event, 'education')">办公学习</button>
-  <button class="tab-button" onclick="openTab(event, 'academic')">文献书籍</button>
-  <button class="tab-button" onclick="openTab(event, 'vedio')">影音漫画</button>
-  <button class="tab-button" onclick="openTab(event, 'ai')">AI</button>
-  <button class="tab-button" onclick="openTab(event, 'tool')">工具</button>
-  <button class="tab-button" onclick="openTab(event, 'other')">其他</button>
+  <button class="tab-button active" onclick="openTab(event, 'education')">E</button>
+  <button class="tab-button" onclick="openTab(event, 'book')">B</button>
+  <button class="tab-button" onclick="openTab(event, 'vedio')">V</button>
+  <button class="tab-button" onclick="openTab(event, 'ai')">A</button>
+  <button class="tab-button" onclick="openTab(event, 'tool')">T</button>
+  <button class="tab-button" onclick="openTab(event, 'security')">S</button>
+  <button class="tab-button" onclick="openTab(event, 'other')">O</button>
 </div>
 
 <div id="education" class="tab-content active">
@@ -208,7 +229,7 @@
   </div>
 </div>
 
-<div id="academic" class="tab-content">
+<div id="book" class="tab-content">
   <div class="link-list">
     <a href="https://search.essclick.com" title="爱思搜索">爱思</a>
     <a href="https://arxiv.org" title="预印本论文库">arxiv</a>
@@ -312,18 +333,44 @@
     <a href="https://flatuicolors.com/" title="扁平化 UI 颜色配色库">UI颜色</a>
     <a href="https://shields.io/" title="GitHub Shields 徽章生成器">Shield标签</a>
     <a href="http://dir.yardtea.cc" title="在线网站目录生成工具">目录生成</a>
-    <a href="https://roar.iiilab.com/" title="兽音加密趣味文字转换">兽音加密</a>
-	<!--
 	<a href="https://bibtex.online" title="BibTeX 引用格式在线转换">BibTeX引用转换</a>  
 	<a href="https://app.loongtex.com" title="国产 LaTeX 论文协作平台">Loongtex</a> 
-	<a href="https://www.cmd5.com/" title="MD5 等哈希在线加解密">Md5在线加解密</a>  
     <a href="https://simpletex.cn/" title="Simpletex 公式 OCR 识别">Simpletex OCR</a>  
  	<a href="https://www.latexai.com" title="AI 辅助 LaTeX 公式编辑">latex公式编辑2</a>  
-	<a href="https://www.sojson.com/hexadecimal.html" title="十六进制与文本互转工具">16进制转文本</a>  
-	-->
   </div>
 </div>
 
+<div id="security" class="tab-content">
+  <div class="link-list">
+	<a href="https://ctftime.org/" target="_blank">Ctftime</a>
+    <a href="https://adworld.xctf.org.cn/" target="_blank">XCTF</a>
+    <a href="https://ctf.show/" target="_blank">Ctfshow</a>
+    <a href="https://www.nssctf.cn/" target="_blank">NSSCTF</a>
+    <a href="https://hello-ctf.com/" target="_blank">HelloCTF</a>
+    <a href="https://ctfwar.org.cn/cyber-range.html" target="_blank">CtfWar攻防靶场</a>
+    <a href="https://pwn.college/dojos" target="_blank">PwnCollege</a>
+    <a href="http://www.kammerl.de/ascii/AsciiSignature.php" target="_blank">Ascii</a>
+    <a href="https://tooltt.com/" target="_blank">Ctf工具</a>
+    <a href="http://1o1o.xyz/ctfsoft.html" target="_blank">ctf工具</a>
+    <a href="https://www.lddgo.net/encrypt/morse" target="_blank">在线摩斯密码翻译</a>
+    <a href="https://merri.cx/qrazybox/" target="_blank">二维码解析</a>
+    <a href="https://ctf.mzy0.com/CyberChef3" target="_blank">CyberChef</a>
+    <a href="https://txtmoji.com/" target="_blank">颜文字加解密</a>
+    <a href="https://ctf.bugku.com/tools" target="_blank">BugkuCtf工具</a>
+    <a href="http://www.hiencode.com/atbash.html" target="_blank">埃特巴什码</a>
+    <a href="https://www.metools.info/code/fence155.html#google_vignette" target="_blank">栅栏密码</a>
+    <a href="https://tool.lvtao.net/aes" target="_blank">AES在线加解密</a>
+    <a href="https://www.sojson.com/encrypt_aes.html" target="_blank">AES加解密</a>
+    <a href="http://www.jsons.cn/rabbitencrypt/" target="_blank">Rabbit加解密</a>
+    <a href="https://tool.bugku.com/brainfuck/" target="_blank">BrainfuckOk</a>
+    <a href="http://serpent.online-domain-tools.com/#google_vignette" target="_blank">serpent加解密</a>
+    <a href="https://hashes.com/zh/decrypt/hash" target="_blank">md5&hash解码</a>
+	<a href="https://www.cmd5.com/" title="MD5 等哈希在线加解密">Md5在线加解密</a>  
+    <a href="https://cn.freemd5.com/index.php" target="_blank">免费MD5查询</a>
+	<a href="https://roar.iiilab.com/" title="兽音加密趣味文字转换">兽音加密</a>
+	<a href="https://www.sojson.com/hexadecimal.html" title="十六进制与文本互转工具">16进制转文本</a> 
+  </div>
+</div>
 
 <div id="other" class="tab-content">
   <div class="link-list">
@@ -347,34 +394,7 @@
     <a href="https://cancn.cathot133.top" title="Candy云机场服务入口">candy云</a>
     <a href="https://w02.scvipaffa10.cc" title="Speedcat高速机场节点">speedcat</a>
     <a href="https://www.softgj.com" title="软件管家下载与管理">软件管家</a>  
-    <!--
-    <a href="https://ctftime.org/" target="_blank">Ctftime</a>
-    <a href="https://adworld.xctf.org.cn/" target="_blank">XCTF</a>
-    <a href="https://ctf.show/" target="_blank">Ctfshow</a>
-    <a href="https://www.nssctf.cn/" target="_blank">NSSCTF</a>
-    <a href="https://hello-ctf.com/" target="_blank">HelloCTF</a>
-    <a href="https://ctfwar.org.cn/cyber-range.html" target="_blank">CtfWar攻防靶场</a>
-    <a href="https://pwn.college/dojos" target="_blank">PwnCollege</a>
-    <a href="http://www.kammerl.de/ascii/AsciiSignature.php" target="_blank">Ascii</a>
-    <a href="https://tooltt.com/" target="_blank">Ctf工具</a>
-    <a href="http://1o1o.xyz/ctfsoft.html" target="_blank">ctf工具</a>
-    <a href="https://www.lddgo.net/encrypt/morse" target="_blank">在线摩斯密码翻译</a>
-    <a href="https://merri.cx/qrazybox/" target="_blank">二维码解析</a>
-    <a href="https://ctf.mzy0.com/CyberChef3" target="_blank">CyberChef</a>
-    <a href="https://txtmoji.com/" target="_blank">颜文字加解密</a>
-    <a href="https://ctf.bugku.com/tools" target="_blank">BugkuCtf工具</a>
-    <a href="http://www.hiencode.com/atbash.html" target="_blank">埃特巴什码</a>
-    <a href="https://www.metools.info/code/fence155.html#google_vignette" target="_blank">栅栏密码</a>
-    <a href="https://tool.lvtao.net/aes" target="_blank">AES在线加解密</a>
-    <a href="https://www.sojson.com/encrypt_aes.html" target="_blank">AES加解密</a>
-    <a href="http://www.jsons.cn/rabbitencrypt/" target="_blank">Rabbit加解密</a>
-    <a href="https://tool.bugku.com/brainfuck/" target="_blank">BrainfuckOk</a>
-    <a href="http://serpent.online-domain-tools.com/#google_vignette" target="_blank">serpent加解密</a>
-    <a href="https://hashes.com/zh/decrypt/hash" target="_blank">md5&hash解码</a>
-    <a href="https://cn.freemd5.com/index.php" target="_blank">免费MD5查询</a>
-    -->
   </div>
-
 </div>
 
 <script>
